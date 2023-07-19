@@ -12,24 +12,22 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
 </head>
 
 <body>
     @include('partials.sidebar')
 
-    <div class="container-art mt-4 ">
-        <div class="content-art">
-            @yield('container')
-        </div>
-    </div>
-
     @include('partials.footer')
+
+    @yield('scripts')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
 
-    <script src="js/script.js"></script>
+
+    {{-- <script src="{{ asset('JS/script.js') }}"></script> --}}
 </body>
 
 </html>

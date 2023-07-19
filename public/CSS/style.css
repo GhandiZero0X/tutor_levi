@@ -63,6 +63,8 @@
 .sidebar {
     background-color: #f8f9fa;
     height: 100vh;
+    margin-bottom: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .main-content {
@@ -79,6 +81,7 @@
 
 .sidebar .nav-link:hover {
     color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-link.active {
@@ -102,6 +105,20 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Isi Konten dari Menu home */
+.btn-success.btn-hover {
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-success.btn-hover:hover {
+    background-color: transparent;
+    color: #28a745;
+    border: 1px solid #28a745;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* Footer user */
 footer {
     height: 50px;
@@ -111,6 +128,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0;
 }
 
 footer p {
@@ -136,5 +154,3 @@ footer p {
     background-color: #0d6efd;
     color: white;
 }
-
-

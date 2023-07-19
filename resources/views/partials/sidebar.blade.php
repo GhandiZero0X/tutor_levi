@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-2 sidebar bg-primary ">
+    <div class="row d-flex">
+        <div class="col-2 sidebar bg-primary flex-grow-0">
             <div class="d-flex align-items-center justify-content-center mt-3 mb-4">
                 <img src="images/logoTitle/logoweb.png" alt="Logo" width="40" height="40" class="mr-2"
                     style="margin-right: 10px;">
@@ -13,7 +13,7 @@
                         href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn-success border text-white rounded {{ $title === 'Notifikasi' ? 'active' : '' }}"
+                    <a class="nav-link btn-success border text-white rounded {{ $title === 'notifikasi' ? 'active' : '' }}"
                         href="{{ route('notifikasi') }}">Notifikasi</a>
                 </li>
             </ul>
@@ -24,9 +24,9 @@
                 </li>
             </ul>
         </div>
-            <div class="col-10">
-                @yield('content')
-            </div>
+        <div class="col-10 main-content flex-grow-1">
+            <div id="notificationContainer"></div>
+            @yield('content')
         </div>
     </div>
 </div>

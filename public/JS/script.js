@@ -23,5 +23,10 @@
 //     });
 // });
 
-
+// Isi Form Buat Catatan
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('buatCatatanButton').addEventListener('click', function() {
+        document.getElementById('isiContentSection').style.display = 'block';
+    });
+});
 

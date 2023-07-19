@@ -14,10 +14,17 @@ class HomeController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             $namaUser = Mahasiswa::where('NAMA', $user->NAMA)->value('NAMA');
+            $idUser = Mahasiswa::where('id', $user->id)->value('id');
+
+            $jadwalharian = $user->catatans;
+            $tugas = $user->tugas; // Retrieve the jadwalharian records associated with the user
 
             return view('pages.users.home', [
                 'title' => 'Home',
-                'namaUser' => $namaUser
+                'namaUser' => $namaUser,
+                'mahasiswaId' => $idUser,
+                'jadwalharian' => $jadwalharian,
+                'tugas' => $tugas,  // Pass the jadwalharian variable to the view
             ]);
         } else {
             // Pengguna tidak terotentikasi, lakukan penanganan yang sesuai
